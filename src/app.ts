@@ -3,9 +3,9 @@ import 'express-async-errors'
 import express from 'express'
 import cors from 'cors'
 
-//import routes
+import usersRouter from './routes/users.routes'
 
-//import middleware
+import handleErrorMiddleware from './middlewares/handleError.middleware'
 
 const app = express()
 app.use(express.json())
@@ -18,12 +18,11 @@ const corsOptions = {
 
 app.use(cors(corsOptions))
 
-//routes users
-//app.use('/users', usersRouter)
+app.use('/users', usersRouter)
 
 //routes login
 //routes transactions
 
-//app.use(handleErrorMiddleware)
+app.use(handleErrorMiddleware)
 
 export default app
