@@ -4,6 +4,7 @@ import express from 'express'
 import cors from 'cors'
 
 import usersRouter from './routes/users.routes'
+import loginRouter from './routes/login.routes'
 
 import handleErrorMiddleware from './middlewares/handleError.middleware'
 
@@ -19,8 +20,7 @@ const corsOptions = {
 app.use(cors(corsOptions))
 
 app.use('/users', usersRouter)
-
-//routes login
+app.use('/login', loginRouter)
 //routes transactions
 
 app.use(handleErrorMiddleware)
