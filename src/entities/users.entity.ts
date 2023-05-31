@@ -1,6 +1,6 @@
 import { Entity, PrimaryGeneratedColumn, Column, OneToMany, CreateDateColumn } from 'typeorm'
 import { v4 as uuid } from 'uuid'
-//entity transactions
+import Transactions from '../entities/transactions.entity'
 
 @Entity('users')
 class Users{
@@ -22,9 +22,9 @@ class Users{
     @CreateDateColumn()
     createdAt: Date
 
-    /* @OneToMany((type) => Transactions, transactions => transactions.user)
+    @OneToMany((type) => Transactions, transactions => transactions.user)
     transactions: Transactions[]
- */
+
     constructor() {
         if(!this.id){
             this.id = uuid()
