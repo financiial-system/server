@@ -1,8 +1,10 @@
 import AppDataSource from "../../data-source";
-import { ITransactionsRequest } from "../../interfaces/transactions";
+import AppError from "../../errors/AppError";
+
 import Users from "../../entities/users.entity";
 import Transactions from "../../entities/transactions.entity";
-import AppError from "../../errors/AppError";
+
+import { ITransactionsRequest } from "../../interfaces/transactions";
 
 export const createTransactionsService = async ({description,amount,type,id}:ITransactionsRequest):Promise<Transactions> => {
     const usersRepository = AppDataSource.getRepository(Users)
@@ -11,7 +13,6 @@ export const createTransactionsService = async ({description,amount,type,id}:ITr
             id: id
         }
     })
-
 
     if(!user){
         throw new AppError('Ivalid user id', 400)

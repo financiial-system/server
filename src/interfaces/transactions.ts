@@ -18,3 +18,9 @@ export interface ITransactionsSchema {
     amount: number,
     type: string
 }
+
+
+export interface ITransactionsDeleteRequest {
+    id: string,
+    transactionId: string,
+}
