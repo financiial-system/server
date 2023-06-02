@@ -6,9 +6,9 @@ import ensureAuthTokenMiddleware from '../middlewares/ensureAuthToken.middleware
 
 const transactionsRouter = Router()
 transactionsRouter.post('', ensureAuthTokenMiddleware, validationSchemaMiddleware(TransactionsSchema), createTransactionsController)
-transactionsRouter.get('', ensureAuthTokenMiddleware, listTransactionsController)
+transactionsRouter.get('', listTransactionsController)
 transactionsRouter.patch('/:id', ensureAuthTokenMiddleware,validationSchemaMiddleware(TransactionsSchema),updateTransactionsController)
-transactionsRouter.delete('/:id', ensureAuthTokenMiddleware, deleteTransactionsController)
+transactionsRouter.delete('/:id', deleteTransactionsController)
 
 export default transactionsRouter
 

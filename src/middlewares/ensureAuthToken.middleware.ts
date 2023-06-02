@@ -3,8 +3,8 @@ import jwt from 'jsonwebtoken';
 import AppError from '../errors/AppError';
 
 const ensureAuthTokenMiddleware = async (req: Request,res: Response,next: NextFunction) => {
-  let token = req.headers.authorization
- 
+   let token = req.headers.authorization
+
   if (!token){
     throw new AppError('There are not a token',401);
   }

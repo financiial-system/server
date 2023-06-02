@@ -9,7 +9,7 @@ import { deleteTransactionsService } from "../services/transactions/deleteTransa
 export const createTransactionsController = async (req: Request, res: Response) => {
     const { description, amount, type }:ITransactionsRequest = req.body
     const id = req.users.userId
-
+    
     const transactions = await createTransactionsService({description, amount, type, id})
     return res.status(201).send({transactions: transactions})
    
