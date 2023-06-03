@@ -5,7 +5,6 @@ import { listTransactionsService } from "../services/transactions/listTransactio
 import { updateTransactionsService } from "../services/transactions/updateTransactions.services";
 import { deleteTransactionsService } from "../services/transactions/deleteTransactions.services";
 
-
 export const createTransactionsController = async (req: Request, res: Response) => {
     const { description, amount, type }:ITransactionsRequest = req.body
     const id = req.users.userId
@@ -26,14 +25,14 @@ export const updateTransactionsController = async (req: Request, res: Response) 
     const transactionId = req.params.id
 
     const transactions = await updateTransactionsService({description, amount, type, id, transactionId})
-    return res.status(201).send(transactions)
+    return res.status(200).send(transactions)
 
 }
 
 export const deleteTransactionsController = async (req: Request, res: Response) => {
     const id = req.users.userId
     const transactionId = req.params.id
-
+    
     const transactions = await deleteTransactionsService({id, transactionId})
-    return res.status(201).send(transactions)
+    return res.status(204).send(transactions)
 }

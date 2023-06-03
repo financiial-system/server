@@ -3,7 +3,7 @@ import { ITransactionsDeleteRequest } from "../../interfaces/transactions";
 import Transactions from "../../entities/transactions.entity";
 import AppError from "../../errors/AppError";
 
-export const deleteTransactionsService = async ({id,transactionId}:ITransactionsDeleteRequest):Promise<any> => {
+export const deleteTransactionsService = async ({id,transactionId}:ITransactionsDeleteRequest) => {
     const transactionsRepository = AppDataSource.getRepository(Transactions)
     const transactions = await transactionsRepository.findOne({
         where: {

@@ -8,7 +8,7 @@ const transactionsRouter = Router()
 transactionsRouter.post('', ensureAuthTokenMiddleware, validationSchemaMiddleware(TransactionsSchema), createTransactionsController)
 transactionsRouter.get('', listTransactionsController)
 transactionsRouter.patch('/:id', ensureAuthTokenMiddleware,validationSchemaMiddleware(TransactionsSchema),updateTransactionsController)
-transactionsRouter.delete('/:id', deleteTransactionsController)
+transactionsRouter.delete('/:id', ensureAuthTokenMiddleware, deleteTransactionsController)
 
 export default transactionsRouter
 

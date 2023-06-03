@@ -24,7 +24,6 @@ app.use('/users', usersRouter)
 app.use('/login', loginRouter)
 app.use('/transactions', transactionsRouter)
 
-
 app.use(handleErrorMiddleware)
 
 export default app
