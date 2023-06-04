@@ -6,5 +6,5 @@ export const UserSchema: SchemaOf<IUserSchema> = yup.object().shape({
     name: yup.string().required(),
     email: yup.string().email().required(),
     avatar: yup.string().url().required(),
-	password: yup.string().min(3).required()
+	password: yup.string().required()
 })
