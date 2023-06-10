@@ -20,6 +20,7 @@ Visão geral do projeto, um pouco das tecnologias usadas.
 Diagrama ER da API definindo bem as relações entre as tabelas do banco de dados.
 
 ![DER-DevBlog](https://user-images.githubusercontent.com/77212802/198846853-a1e14df9-4f28-4468-9a2f-ee078ce48873.png)
+<img src="../../diagrama.png"/>
 
 ---
 
