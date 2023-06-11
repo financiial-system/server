@@ -125,7 +125,7 @@ Content-type: application/json
 name: yup.string().required(),
 email: yup.string().email().required(),
 avatar: yup.string().url().required(),
-password: yup.string().min(9).required()
+password: yup.string().required()
 ```
 
 OBS.: Chaves não presentes no schema serão removidas e valores vazios ou nulos não serão aceitos.
