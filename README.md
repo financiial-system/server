@@ -4,7 +4,7 @@
 
 Visão geral do projeto, um pouco das tecnologias usadas.
 
-- [NodeJS](https://nodejs.org/en/)
+- [NodeJS](https://nodejs.org/en/) 
 - [Express](https://expressjs.com/pt-br/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [PostgreSQL](https://www.postgresql.org/)
